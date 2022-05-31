@@ -1,0 +1,116 @@
+{
+    "name": "Workshop31_Actions",
+    "maps": [
+        {
+            "name": "ControllerActions",
+            "id": "eb315548-2b24-43a8-b3c6-6fa78ddc10ba",
+            "actions": [
+                {
+                    "name": "ToggleMode",
+                    "type": "Button",
+                    "id": "e5e630a0-9814-439f-9676-b4b28eafb9f3",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Publish",
+                    "type": "Button",
+                    "id": "2a68cbc4-d2ce-4f31-9497-382079e7447f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Exit",
+                    "type": "Button",
+                    "id": "76e3e58f-4d9f-4420-afff-746617140118",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "IncrementPublish",
+                    "type": "Button",
+                    "id": "55518299-3eac-4be9-b8ae-e5cbf52a9dde",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "c73a6f4f-4f01-4aa2-b09e-7b9e557cff99",
+                    "path": "<VIUSyntheticDeviceLayoutControllerRole>{RightHand}/Grip",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ToggleMode",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "04b878f3-c7f9-41ba-a61f-9069c4c21698",
+                    "path": "<Keyboard>/z",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ToggleMode",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6c46bb80-ab92-4e0b-83ff-c3f4dd701bdd",
+                    "path": "<VIUSyntheticDeviceLayoutControllerRole>{RightHand}/Trigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Publish",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "cf7b10b6-9884-423f-84ec-c8bc33d1fdb0",
+                    "path": "<Keyboard>/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Publish",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9fbaacd5-70b4-4adf-922c-b723a7242446",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Exit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b1cc6bd2-10af-420e-82db-99d2b2184149",
+                    "path": "<VIUSyntheticDevice>/DPadUp",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "IncrementPublish",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

@@ -1,0 +1,257 @@
+{
+    "name": "HTC_Extra_Input",
+    "maps": [
+        {
+            "name": "HTC XRI LightHouse 1",
+            "id": "a4c92442-9f1c-42f7-9720-1e7d67540b14",
+            "actions": [
+                {
+                    "name": "Position",
+                    "type": "Value",
+                    "id": "78ce91a9-14d0-46a9-8011-e4d4724cd58d",
+                    "expectedControlType": "Vector3",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Rotation",
+                    "type": "Value",
+                    "id": "4bff173b-44c5-4350-846b-e2f395d2c56c",
+                    "expectedControlType": "Quaternion",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "564b5d20-74ff-42d1-b0e3-cb97b65c4af7",
+                    "path": "<VIUSyntheticDeviceLayoutDeviceRole>{Device1}/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Position",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "177634e3-482b-4cc9-9ac8-8096747e1fc7",
+                    "path": "<VIUSyntheticDeviceLayoutDeviceRole>{Device1}/rotation",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Rotation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "HTC XRI LightHouse 2",
+            "id": "8d5292d6-b603-4539-8472-d5ecf03677bc",
+            "actions": [
+                {
+                    "name": "Position",
+                    "type": "Value",
+                    "id": "ab23c524-466b-4c6f-bae9-f77787f832fa",
+                    "expectedControlType": "Vector3",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Rotation",
+                    "type": "Value",
+                    "id": "cc9b0398-cfa7-4128-b27e-765eca8f5f95",
+                    "expectedControlType": "Quaternion",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "380c6d45-2833-42eb-a9c1-c2d6cde764ca",
+                    "path": "<VIUSyntheticDeviceLayoutDeviceRole>{Device2}/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Position",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "940da7bd-cfa7-4e3e-b730-7040596b83f3",
+                    "path": "<VIUSyntheticDeviceLayoutDeviceRole>{Device2}/rotation",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Rotation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "HTC XRI Tracker 1",
+            "id": "9a456afd-2302-45c9-8d39-ab045b706000",
+            "actions": [
+                {
+                    "name": "Position",
+                    "type": "Value",
+                    "id": "17d832cc-645d-4326-b941-d39e304d26ac",
+                    "expectedControlType": "Vector3",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Rotation",
+                    "type": "Value",
+                    "id": "6e339b25-4ed9-4a79-95ad-2eb1bc900e11",
+                    "expectedControlType": "Quaternion",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "1844bc2a-50d5-48d7-ae11-d27cc4ec72ae",
+                    "path": "<VIUSyntheticDeviceLayoutDeviceRole>{Device5}/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Position",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "90adfc4c-eb80-49b8-bc86-373ae4b92f0a",
+                    "path": "<VIUSyntheticDeviceLayoutDeviceRole>{Device5}/rotation",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Rotation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "HTC XRI Tracker 2",
+            "id": "767106b3-14c9-48ee-8790-b98edbf39312",
+            "actions": [
+                {
+                    "name": "Position",
+                    "type": "Value",
+                    "id": "e6a3b915-aea4-48c9-860c-db3be1552e73",
+                    "expectedControlType": "Vector3",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Rotation",
+                    "type": "Value",
+                    "id": "36f54658-7988-486a-b033-0fd83907d026",
+                    "expectedControlType": "Quaternion",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "bf933a9b-e9d2-412c-9684-39c7cf4e2f6d",
+                    "path": "<VIUSyntheticDeviceLayoutDeviceRole>{Device6}/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Position",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "50684da4-ad02-4865-ac3d-aa40217d583e",
+                    "path": "<VIUSyntheticDeviceLayoutDeviceRole>{Device6}/rotation",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Rotation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "Generic XR Controller",
+            "bindingGroup": "Generic XR Controller",
+            "devices": [
+                {
+                    "devicePath": "<XRController>{LeftHand}",
+                    "isOptional": true,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<XRController>{RightHand}",
+                    "isOptional": true,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<XRController>",
+                    "isOptional": true,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<WMRHMD>",
+                    "isOptional": true,
+                    "isOR": false
+                }
+            ]
+        },
+        {
+            "name": "Continuous Move",
+            "bindingGroup": "Continuous Move",
+            "devices": [
+                {
+                    "devicePath": "<XRController>{LeftHand}",
+                    "isOptional": false,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<XRController>{RightHand}",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        },
+        {
+            "name": "Noncontinuous Move",
+            "bindingGroup": "Noncontinuous Move",
+            "devices": [
+                {
+                    "devicePath": "<XRController>{LeftHand}",
+                    "isOptional": false,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<XRController>{RightHand}",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}
