@@ -13,6 +13,7 @@ public class ConstantOSCPublisher : MonoBehaviour {
 	public ConstantTracker tracker;
 	private OscMessage message = new OscMessage();
 	public string topic = "/trackedObjects";
+	public float scaler = 1;
     
 	void Start(){
 		this.topic += "_" + this.tracker.gameObject.name.Replace(" ", string.Empty);
@@ -42,6 +43,7 @@ public class ConstantOSCPublisher : MonoBehaviour {
 	private void UpdateMessage(){
 		this.message.values.Clear();
 		Vector3 oscPoint = this.tracker.orientationInfo.position.UnityPointToOscPoint();
+		oscPoint *= scalar;
 		this.message.values.Add(oscPoint.x);
 		this.message.values.Add(oscPoint.y);
 		this.message.values.Add(oscPoint.z);
