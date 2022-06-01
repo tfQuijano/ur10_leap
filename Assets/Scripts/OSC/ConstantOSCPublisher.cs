@@ -21,7 +21,7 @@ public class ConstantOSCPublisher : MonoBehaviour {
 	private Vector3 lastPosition = Vector3.zero;
     
 	void Start(){
-		this.topic += "_" + this.tracker.gameObject.name.Replace(" ", string.Empty);
+		this.topic += "" + this.tracker.gameObject.name.Replace(" ", string.Empty);
         
 		this.osc = GetComponent<OSC>();
 		PrepareMessage();
