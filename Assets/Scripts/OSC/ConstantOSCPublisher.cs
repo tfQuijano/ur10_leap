@@ -8,12 +8,17 @@ using System;
 
 [RequireComponent(typeof(OSC))]
 public class ConstantOSCPublisher : MonoBehaviour {
-    
+	public Transform scaleCenter;
+	public GameObject preview;
+	public AnimationCurve curve;
+	public Vector2 minMaxDistance = new Vector2(0, 2);
+
 	private OSC osc;
 	public ConstantTracker tracker;
 	private OscMessage message = new OscMessage();
 	public string topic = "/trackedObjects";
-	public float scaler = 1;
+	public float scalar = 1;
+	private Vector3 lastPosition = Vector3.zero;
     
 	void Start(){
 		this.topic += "_" + this.tracker.gameObject.name.Replace(" ", string.Empty);
@@ -42,8 +47,16 @@ public class ConstantOSCPublisher : MonoBehaviour {
 	}
 	private void UpdateMessage(){
 		this.message.values.Clear();
-		Vector3 oscPoint = this.tracker.orientationInfo.position.UnityPointToOscPoint();
-		oscPoint *= scalar;
+		Vector3 oscPoint = this.tracker.orientationInfo.position;
+		Vector3 localScalingCenterPos = this.tracker.tTrackable.InverseTransformPoint(scaleCenter.position);
+		Vector3 difference = oscPoint - localScalingCenterPos;
+		float normalixzedDistance = Mathf.Clamp01(Mathf.InverseLerp(minMaxDistance.x, minMaxDistance.y, difference.magnitude));
+		float curvedDistance = curve.Evaluate(normalixzedDistance);
+		float newDistance = Mathf.Lerp(minMaxDistance.x, minMaxDistance.y, curvedDistance);
+		difference = difference.normalized * newDistance;
+		oscPoint = localScalingCenterPos + difference * scalar;
+		preview.transform.position = this.tracker.tTrackable.TransformPoint(oscPoint);
+		oscPoint = oscPoint.UnityPointToOscPoint();
 		this.message.values.Add(oscPoint.x);
 		this.message.values.Add(oscPoint.y);
 		this.message.values.Add(oscPoint.z);
