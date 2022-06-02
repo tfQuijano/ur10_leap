@@ -11,14 +11,12 @@ public class TestOSCListener : MonoBehaviour
 
     public OSC osc;
     public Transform shoulder;
+    public Transform upperArm;
     public Transform forearm;
     public Transform wrist1;
     public Transform wrist2;
     public Transform wrist3;
     public Transform eef;
-
-
-    public Transform eff;
 
 
 
@@ -68,23 +66,25 @@ public class TestOSCListener : MonoBehaviour
         // Transform wrist2    Y axis rotation
         // Transform wrist3    X axis rotation
 
-        float angle = message.GetFloat(0);
-        shoulder.eulerAngles = new Vector3(shoulder.eulerAngles.x, angle, shoulder.eulerAngles.z); 
+        float angle0 = message.GetFloat(0);
+        shoulder.eulerAngles = new Vector3(shoulder.eulerAngles.x, angle0, shoulder.eulerAngles.z); 
 
-        float angle = message.GetFloat(1);
-        forearm.eulerAngles = new Vector3(forearm.eulerAngles.x, angle, forearm.eulerAngles.z); 
+        float angle1 = message.GetFloat(2);
+        forearm.eulerAngles = new Vector3(upperArm.eulerAngles.x, angle1, upperArm.eulerAngles.z);
 
-        float angle = message.GetFloat(2);
-        wrist1.eulerAngles = new Vector3(wrist1.eulerAngles.x, angle, wrist1.eulerAngles.z); 
+        float angle2 = message.GetFloat(2);
+        forearm.eulerAngles = new Vector3(forearm.eulerAngles.x, angle2, forearm.eulerAngles.z);
 
-        float angle = message.GetFloat(3);
-        wrist2.eulerAngles = new Vector3(wrist2.eulerAngles.x, angle, wrist2.eulerAngles.z); 
+        float angle3 = message.GetFloat(3);
+        wrist1.eulerAngles = new Vector3(wrist1.eulerAngles.x, angle3, wrist1.eulerAngles.z); 
 
-        float angle = message.GetFloat(4);
-        wrist3.eulerAngles = new Vector3(wrist3.eulerAngles.x, angle, wrist3.eulerAngles.z); 
+        float angle4 = message.GetFloat(4);
+        wrist2.eulerAngles = new Vector3(wrist2.eulerAngles.x, angle4, wrist2.eulerAngles.z); 
 
-        float angle = message.GetFloat(5);
-        eef.eulerAngles = new Vector3(eef.eulerAngles.x, angle, eef.eulerAngles.z); 
+        float angle5 = message.GetFloat(5);
+        wrist3.eulerAngles = new Vector3(wrist3.eulerAngles.x, angle5, wrist3.eulerAngles.z); 
+
+        
 
 
 
