@@ -19,7 +19,10 @@ public class ConstantOSCPublisher : MonoBehaviour {
 	public string topic = "/trackedObjects";
 	public float scalar = 1;
 	private Vector3 lastPosition = Vector3.zero;
-    
+
+	public bool simpleSender = false;
+
+
 	void Start(){
 		this.topic += "" + this.tracker.gameObject.name.Replace(" ", string.Empty);
         
@@ -35,7 +38,10 @@ public class ConstantOSCPublisher : MonoBehaviour {
 			return;
 		}
 		try {
-			UpdateMessage();
+			if (simpleSender)
+				SimpleUpdateMessage();
+			else
+				UpdateMessage();
 			Publish(message);
 		} catch (Exception exception) {
 			Debug.Log("ConstantOSCPublisher: publish exception: "+ exception.ToString());
@@ -57,10 +63,19 @@ public class ConstantOSCPublisher : MonoBehaviour {
 		oscPoint = localScalingCenterPos + difference * scalar;
 		preview.transform.position = this.tracker.tTrackable.TransformPoint(oscPoint);
 		oscPoint = oscPoint.UnityPointToOscPoint();
-		this.message.values.Add(oscPoint.x);
+		this.message.values.Add(Mathf.Clamp(oscPoint.x, .75f, 1.0f));
 		this.message.values.Add(oscPoint.y);
 		this.message.values.Add(oscPoint.z);
 		// this.message.pose.orientation = this.tracker.orientationInfo.rotation.eulerAngles.UnityEulerToRosQuaternion();
+	}
+	private void SimpleUpdateMessage()
+	{
+		this.message.values.Clear();
+		Vector3 oscPoint = this.tracker.orientationInfo.position;
+		oscPoint = oscPoint.UnityPointToOscPoint();
+		this.message.values.Add(oscPoint.x);
+		this.message.values.Add(oscPoint.y);
+		this.message.values.Add(oscPoint.z);
 	}
 	private void Publish(OscMessage message){
 		#if DEBUG
