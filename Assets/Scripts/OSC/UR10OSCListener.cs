@@ -77,14 +77,14 @@ public class UR10OSCListener : MonoBehaviour
         float angle1 = (message.GetFloat(1) * scalar + 180 + 90 + 360) % 360 - 180;
         upperArm.localEulerAngles = new Vector3(angle1, upperArm.localEulerAngles.y, upperArm.localEulerAngles.z); // y axis
 
-        float angle2 = (message.GetFloat(2) * scalar + 360) % 360 - 180;
+        float angle2 = (message.GetFloat(2) * scalar + 360) % 360;
         forearm.localEulerAngles = new Vector3(angle2, forearm.localEulerAngles.y, forearm.localEulerAngles.z); // y axis
 
-        float angle3 = (message.GetFloat(3) * scalar + 180 + 360) % 360 - 180;
+        float angle3 = (message.GetFloat(3) * scalar + 360) % 360 ;
         //wrist1.localEulerAngles = new Vector3(angle3, wrist1.localEulerAngles.y, wrist1.localEulerAngles.z); 
         wrist1.localEulerAngles = new Vector3(angle3, wrist1.localEulerAngles.y, wrist1.localEulerAngles.z); 
 
-        float angle4 = (message.GetFloat(4) * scalar + 180 + 360) % 360 - 180;
+        float angle4 = (message.GetFloat(4) * scalar + 360) % 360 - 180;
         wrist2.localEulerAngles = new Vector3(wrist2.localEulerAngles.x, angle4, wrist2.localEulerAngles.z);
 
         float angle5 = (message.GetFloat(5) * scalar +180+ 360) % 360 - 180;
